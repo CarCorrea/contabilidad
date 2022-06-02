@@ -9,7 +9,7 @@ public class Factura {
     private Long idFactura;
     private Producto producto;
     private int montoFactura;
-    private int estadoFactura;
+    private String estadoFactura;
     private Date fechaCre;
-    private String usuario;
+    private String usuarioCre;
 }

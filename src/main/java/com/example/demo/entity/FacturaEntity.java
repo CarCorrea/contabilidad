@@ -16,7 +16,7 @@ public class FacturaEntity {
     private Long idFactura;
 
     @Column(name = "producto", nullable = false, length = 200)
-    private ProductoEntity producto;
+    private Producto producto;
 
     @Column(name = "montoFactura", nullable = false, length = 10)
     private int montoFactura;
@@ -31,7 +31,7 @@ public class FacturaEntity {
     private Date fechaCre;
 
     @Column(name = "usuarioCre", nullable = true, length = 100)
-    private String usuario;
+    private String usuarioCre;
 
     private LocalDateTime creation = LocalDateTime.now();
 }

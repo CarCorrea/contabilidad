@@ -9,7 +9,7 @@ public class Boleta {
     private Long idBoleta;
     private Producto producto;
     private int montoBoleta;
-    private int estadoBoleta;
+    private String estadoBoleta;
     private Date fechaCre;
-    private String usuario;
+    private String usuarioCre;
 }

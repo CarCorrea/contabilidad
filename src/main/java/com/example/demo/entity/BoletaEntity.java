@@ -16,7 +16,7 @@ public class BoletaEntity {
     private Long idBoleta;
 
     @Column(name = "producto", nullable = false, length = 200)
-    private ProductoEntity producto;
+    private Producto producto;
 
     @Column(name = "montoBoleta", nullable = false, length = 20)
     private int montoBoleta;
