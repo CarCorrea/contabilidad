@@ -4,7 +4,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class Boleta {
+public class Factura {
 
     private int id;
     private Producto producto;
