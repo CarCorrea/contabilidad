@@ -6,10 +6,10 @@ import java.util.Date;
 @Data
 public class Factura {
 
-    private int id;
+    private Long idFactura;
     private Producto producto;
-    private int montoBoleta;
-    private int estadoBoleta;
+    private int montoFactura;
+    private int estadoFactura;
     private Date fechaCre;
     private String usuario;
 }

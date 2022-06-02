@@ -6,9 +6,8 @@ import java.util.Date;
 @Data
 public class NotaCredito {
 
-    private int id;
+    private Long id;
+    private int montoCredito;
     private Date fechaCrea;
     private String usuario;
-    private Boleta boleta;
-    private int montoCredito;
 }

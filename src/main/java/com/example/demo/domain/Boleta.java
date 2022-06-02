@@ -6,7 +6,7 @@ import java.util.Date;
 @Data
 public class Boleta {
 
-    private int id;
+    private Long idBoleta;
     private Producto producto;
     private int montoBoleta;
     private int estadoBoleta;
