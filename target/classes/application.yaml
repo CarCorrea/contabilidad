@@ -1,9 +1,14 @@
 server:
-  port: 8000
+  port: 8080
   servlet:
-    context-path: /api/contabilidad/v1
-
+    context-path: /api/contabilidad
+management:
+  server:
+    servlet:
+      context-path: /api/contabilidad
 spring:
+  application:
+    name: contabilidad-service
   h2:
     console:
       enabled: true
@@ -22,3 +27,6 @@ spring:
     hibernate:
       ddl-auto: create-drop
       show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
