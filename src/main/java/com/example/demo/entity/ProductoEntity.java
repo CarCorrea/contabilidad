@@ -12,6 +12,7 @@ import java.util.Date;
 public class ProductoEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idProducto;
 
     @Column(name = "nombreProducto", nullable = false, length = 200)

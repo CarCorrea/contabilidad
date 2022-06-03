@@ -1,22 +1,21 @@
 package com.example.demo.entity;
 
-import com.example.demo.domain.Producto;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "Boleta", uniqueConstraints = @UniqueConstraint(columnNames = {"idBoleta", "producto", "montoBoleta", "estadoBoleta", "fechaCre", "usuario" }))
+@Table(name = "Boleta", uniqueConstraints = @UniqueConstraint(columnNames = {"idBoleta", "producto", "montoBoleta", "estadoBoleta", "fechaCre", "usuarioCre" }))
 public class BoletaEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idBoleta;
 
     @Column(name = "producto", nullable = false, length = 200)
-    private Producto producto;
+    private String producto;
 
     @Column(name = "montoBoleta", nullable = false, length = 20)
     private int montoBoleta;
@@ -24,11 +23,11 @@ public class BoletaEntity {
     @Column(name = "estadoBoleta", nullable = false, length = 100)
     private String estadoBoleta;
 
-    @Column(name = "idNotaCredito", nullable = false, length = 20)
+    @Column(name = "idNotaCredito", nullable = true, length = 20)
     private Long idNotaCredito;
 
     @Column(name = "fechaCre", nullable = false, length = 40)
-    private Date fechaCre;
+    private String fechaCre;
 
     @Column(name = "usuarioCre", nullable = true, length = 100)
     private String usuarioCre;

@@ -1,13 +1,11 @@
 package com.example.demo.builder.parent;
 
-import com.example.demo.domain.Producto;
-
 import java.util.Date;
 
 public abstract class FacturaParent<T, E> {
 
     private Long idFactura;
-    private Producto producto;
+    private String producto;
     private int montoFactura;
     private String estadoFactura;
     private Date fechaCre;
@@ -17,7 +15,7 @@ public abstract class FacturaParent<T, E> {
         return idFactura;
     }
 
-    public Producto getProducto() {
+    public String getProducto() {
         return producto;
     }
 
@@ -42,7 +40,7 @@ public abstract class FacturaParent<T, E> {
         return getClassType();
     }
 
-    public E producto(Producto producto){
+    public E producto(String producto){
         this.producto = producto;
         return getClassType();
     }

@@ -20,15 +20,14 @@ public class BoletaService {
 
     Logger logger = LoggerFactory.getLogger(BoletaService.class);
 
-    @Autowired
     private final BoletaRepository repository;
 
+    public BoletaService(BoletaRepository repository){
+        this.repository = repository;
+    }
 
     public Boleta create(Boleta boleta) {
         logger.info("crear boleta");
-        /*if (repository.existById(boleta.getIdBoleta()){
-            throw new BoletaFoundException();
-        }*/
 
         BoletaEntity entity = new BoletaEntityBuilder()
                 .idBoleta(boleta.getIdBoleta())

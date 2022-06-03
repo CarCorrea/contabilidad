@@ -7,7 +7,7 @@ import java.util.Date;
 public class Factura {
 
     private Long idFactura;
-    private Producto producto;
+    private String producto;
     private int montoFactura;
     private String estadoFactura;
     private Date fechaCre;

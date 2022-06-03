@@ -13,6 +13,7 @@ import java.util.Date;
 public class NotaCreditoEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idNotaCredito;
 
     @Column(name = "montoCredito", nullable = false, length = 20)

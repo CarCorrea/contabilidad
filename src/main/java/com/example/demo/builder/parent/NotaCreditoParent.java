@@ -40,7 +40,7 @@ public abstract class NotaCreditoParent<T, E> {
         return getClassType();
     }
 
-    public E usuarioCre(String usuarioCrea){
+    public E usuarioCrea(String usuarioCrea){
         this.usuarioCrea = usuarioCrea;
         return getClassType();
     }

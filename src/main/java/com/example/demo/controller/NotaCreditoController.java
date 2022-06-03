@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/NotaCredito")
+@RequestMapping("/notaCredito")
 public class NotaCreditoController {
 
     Logger logger = LoggerFactory.getLogger(NotaCreditoController.class);

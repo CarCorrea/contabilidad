@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BoletaRepository extends CrudRepository<BoletaEntity, Long>{
 
-    boolean existById(Long id);
+    //boolean existById(Long id);
 }

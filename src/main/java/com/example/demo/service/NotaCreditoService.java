@@ -1,14 +1,9 @@
 package com.example.demo.service;
 
-import com.example.demo.builder.BoletaBuilder;
-import com.example.demo.builder.BoletaEntityBuilder;
 import com.example.demo.builder.NotaCreditoBuilder;
 import com.example.demo.builder.NotaCreditoEntityBuilder;
-import com.example.demo.domain.Boleta;
 import com.example.demo.domain.NotaCredito;
-import com.example.demo.entity.BoletaEntity;
 import com.example.demo.entity.NotaCreditoEntity;
-import com.example.demo.repository.BoletaRepository;
 import com.example.demo.repository.NotaCreditoRepository;
 import lombok.Data;
 import org.slf4j.Logger;
@@ -26,6 +21,10 @@ public class NotaCreditoService {
 
     private final NotaCreditoRepository repository;
 
+    public NotaCreditoService(NotaCreditoRepository repository){
+        this.repository = repository;
+    }
+
     public NotaCredito create(NotaCredito notaCredito) {
         logger.info("crear nota de credito");
 
@@ -33,7 +32,7 @@ public class NotaCreditoService {
                 .idNotaCredito(notaCredito.getIdNotaCredito())
                 .montoCredito(notaCredito.getMontoCredito())
                 .fechaCrea(notaCredito.getFechaCrea())
-                .usuarioCre(notaCredito.getUsuarioCrea())
+                .usuarioCrea(notaCredito.getUsuarioCrea())
                 .builder();
 
         return buildNotaCredito(repository.save(entity));
@@ -45,7 +44,7 @@ public class NotaCreditoService {
                 .idNotaCredito(idNotaCredito)
                 .montoCredito(notaCredito.getMontoCredito())
                 .fechaCrea(notaCredito.getFechaCrea())
-                .usuarioCre(notaCredito.getUsuarioCrea())
+                .usuarioCrea(notaCredito.getUsuarioCrea())
                 .builder();
 
         return buildNotaCredito(repository.save(entity));
@@ -73,7 +72,7 @@ public class NotaCreditoService {
                 .idNotaCredito(entity.getIdNotaCredito())
                 .montoCredito(entity.getMontoCredito())
                 .fechaCrea(entity.getFechaCrea())
-                .usuarioCre(entity.getUsuarioCrea())
+                .usuarioCrea(entity.getUsuarioCrea())
                 .builder();
     }
 }

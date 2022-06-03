@@ -1,23 +1,19 @@
 package com.example.demo.builder.parent;
 
-import com.example.demo.domain.Producto;
-
-import java.util.Date;
-
 public abstract class BoletaParent<T, E> {
 
     private Long idBoleta;
-    private Producto producto;
+    private String producto;
     private int montoBoleta;
     private String estadoBoleta;
-    private Date fechaCre;
+    private String fechaCre;
     private String usuarioCre;
 
     public Long getIdBoleta() {
         return idBoleta;
     }
 
-    public Producto getProducto() {
+    public String getProducto() {
         return producto;
     }
 
@@ -29,7 +25,7 @@ public abstract class BoletaParent<T, E> {
         return estadoBoleta;
     }
 
-    public Date getFechaCre() {
+    public String getFechaCre() {
         return fechaCre;
     }
 
@@ -42,7 +38,7 @@ public abstract class BoletaParent<T, E> {
         return getClassType();
     }
 
-    public E producto(Producto producto){
+    public E producto(String producto){
         this.producto = producto;
         return getClassType();
     }
@@ -57,7 +53,7 @@ public abstract class BoletaParent<T, E> {
         return getClassType();
     }
 
-    public E fechaCre(Date fechaCre){
+    public E fechaCre(String fechaCre){
         this.fechaCre = fechaCre;
         return getClassType();
     }

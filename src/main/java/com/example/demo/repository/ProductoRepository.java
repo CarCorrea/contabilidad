@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductoRepository extends CrudRepository<ProductoEntity, Long> {
 
-    boolean existById(Long id);
+    //boolean existById(Long id);
 }

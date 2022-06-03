@@ -16,6 +16,6 @@ public class NotaCreditoEntityBuilder extends NotaCreditoParent<NotaCreditoEntit
 
     @Override
     protected NotaCreditoEntityBuilder getClassType() {
-        return null;
+        return this;
     }
 }
