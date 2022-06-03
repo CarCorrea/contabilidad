@@ -2,7 +2,6 @@ package com.example.demo.builder;
 
 import com.example.demo.builder.parent.BoletaParent;
 import com.example.demo.domain.Boleta;
-import com.example.demo.entity.BoletaEntity;
 
 public class BoletaBuilder extends BoletaParent<Boleta, BoletaBuilder> {
 
