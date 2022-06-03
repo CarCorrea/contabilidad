@@ -1,7 +1,7 @@
 server:
-  port: 8080
+  port: 8000
   servlet:
-    context-path: /ws/api/contabilidad/v1
+    context-path: /api/contabilidad/v1
 
 spring:
   h2:
